@@ -1,5 +1,5 @@
 {
-  "name": "2019-03-26-cw",
+  "name": "express-crud2-cw-melaatij",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,11 @@
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "express": "~4.16.0",
+    "express": "^4.16.4",
     "http-errors": "~1.6.2",
     "mongoose": "^5.4.20",
     "morgan": "~1.9.0",
     "nodemon": "^1.18.10",
-    "pug": "^2.0.3"
+    "pug": "^2.0.0-beta11"
   }
 }

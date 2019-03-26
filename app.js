@@ -6,14 +6,14 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// var fillPostData = require('./routes/fillPostData');
+// commented out so it doesnt reload data into data base //
+var postDataRouter = require("./routes/fillPostData");
 
 var app = express();
 
-
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = '';
+var mongoDB = 'mongodb+srv://admin:admin@cluster0-absz2.mongodb.net/test?retryWrites=true\n';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -31,7 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/fillData', fillPostData);
+
+//i commented out the link to add all the data //
+// app.use("/fillData", postDataRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

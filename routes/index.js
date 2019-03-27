@@ -32,7 +32,7 @@ router.get("/savePost", (request, response) => {
       response.send(errors)
     }
     else{
-      respond.redirect("/")
+      response.redirect("/")
     }
   })
 });
